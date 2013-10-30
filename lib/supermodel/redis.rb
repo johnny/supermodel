@@ -64,6 +64,10 @@ module SuperModel
       def all
         from_ids(redis.sort(redis_key))
       end
+
+      def all_ids
+        redis.sort(redis_key)
+      end
       
       def select
         raise "Not implemented"
